@@ -7,7 +7,7 @@ class Server(server.BaseHTTPRequestHandler):
             data = 'Hello, World!'
             self.send_response(200)
         elif self.path == '/ping':
-            data = {'ping': 'pong'}
+            data = {'data': [{'ping': 'pong'}]}
             self.send_response(200)
         else:
             data = 'Not Found'

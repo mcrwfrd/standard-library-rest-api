@@ -1,0 +1,39 @@
+openapi: 3.0.1
+info:
+  title: Hello World
+  description: This is a simple standard library REST server.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+tags:
+  - name: ping
+    description: >-
+      A simple endpoint that reports very basic information about the standard
+      library REST server.
+paths:
+  /ping:
+    get:
+      tags:
+        - ping
+      summary: Get very basic information about this server.
+      operationId: getPing
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Ping'
+components:
+  schemas:
+    Ping:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            ping:
+              type: string
+

@@ -18,3 +18,6 @@ Another reason that this repo exists is because I wanted to prove to myself that
   * `localhost:8000/ping`
 5. Visit any other path for a `404` response
 
+# API Documentation
+
+This project includes an OpenAPI specification file at `/openapi.yaml`. You can read this document as-is or, for a more pleasant reading experience, paste the `yaml` file into the [Swagger Editor](https://editor.swagger.io/).
